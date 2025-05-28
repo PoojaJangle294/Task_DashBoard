@@ -1,0 +1,158 @@
+.container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    color: rgba(169, 169, 169, 0.76);
+    padding: 20px;
+}
+
+.class-container {
+    h1 {
+        font-weight: 900;
+        color: rgb(34, 34, 33);
+    }
+
+    h2 {
+        position: relative;
+        margin-top: -138px;
+        margin-left: 144px;
+
+    }
+
+    p {
+        position: relative;
+        margin-top: -10px;
+        margin-left: 132px;
+    }
+
+    .stat {
+        margin-top: 86px;
+        margin-left: 97px;
+    }
+
+}
+
+.chart-overview {
+    background-color: rgb(212, 212, 212);
+    border-radius: 5px;
+
+    canvas {
+        width: 100%;
+    }
+
+}
+
+
+table {
+    border: 2px solid rgb(212, 212, 212);
+    border-radius: 10px;
+
+    ::ng-deep table.mat-table tr.mat-row:hover {
+        background-color: #f0f0f0 !important;
+        cursor: pointer !important;
+        transition: background-color 0.3s ease;
+    }
+
+
+    th {
+        background-color: rgb(212, 212, 212);
+    }
+
+
+}
+
+
+.action-tab {
+    flex: 2 1 500px;
+    min-width: 400px;
+
+    button {
+        background: none;
+        border: solid 1px blue;
+        color: blue;
+        border-radius: 5px;
+    }
+
+    .action-overview {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 10px;
+        gap: 2%;
+
+        .total-task {
+            justify-content: flex-start !important;
+            margin-right: 48.5%;
+            font-weight: 900;
+            color: rgb(34, 34, 33);
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+
+            .search-input {
+                width: 250px;
+                height: 40px;
+
+                ::ng-deep .mat-mdc-text-field-wrapper {
+                    height: 45px !important;
+
+
+                }
+
+                .mat-form-field-flex {
+                    background-color: #fff;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                    padding-bottom: 10px;
+
+                }
+
+                .mat-form-field-outline {
+                    display: none;
+                }
+
+            }
+
+            input {
+                font-size: 14px;
+            }
+
+            .mat-icon {
+                color: #666;
+            }
+        }
+
+
+        .icon-button {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            width: 40px;
+            height: 40px;
+
+            mat-icon {
+                color: #555;
+            }
+
+            &:hover {
+                background-color: #f0f0f0;
+            }
+        }
+
+        .add-button {
+            height: 40px;
+            min-width: 64px;
+            font-weight: 500;
+            border: 1px solid #1976d2;
+            color: #1976d2;
+
+            &:hover {
+                background-color: rgba(25, 118, 210, 0.08);
+            }
+        }
+    }
+}
