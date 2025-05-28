@@ -7,10 +7,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Features
-# Create a new task.
-# Update the existing task
-# Display all tasks
-# Display the task ratio in the doghunt chart
+- Create a new task.
+- Update the existing task
+- Display all tasks
+- Display the task ratio in the doghunt chart
 
 ##  Tech Stack
 - Angular
@@ -29,12 +29,12 @@ git clone https://github.com/PoojaJangle294/Task_DashBoard.git
 cd project-name
 
 ##Notes
-Make sure Node.js and Angular CLI are installed.
+- Make sure Node.js and Angular CLI are installed.
 
-The node_modules folder is excluded from version control (as per .gitignore).
+- The node_modules folder is excluded from version control (as per .gitignore).
 
-All required packages are listed in package.json.
+- All required packages are listed in package.json.
 
 ## Further help
-#Contact
+-Contact
 For any questions, feel free to contact me at poojajangle29@gamil.com.
