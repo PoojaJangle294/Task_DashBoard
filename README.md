@@ -37,4 +37,4 @@ cd project-name
 
 ## Further help
 -Contact
-For any questions, feel free to contact me at poojajangle29@gamil.com.
+For any questions, feel free to contact me at poojajangle29@gmail.com.
