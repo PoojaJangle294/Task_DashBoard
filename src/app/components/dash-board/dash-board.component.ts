@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 
@@ -7,6 +7,7 @@ import { TaskDialogComponent } from '../task-dialog/task-dialog.component';
 import { TaskService, TaskStatusCounts } from 'src/app/services/task.service';
 import * as XLSX from 'xlsx';
 import * as FileSaver from 'file-saver';
+import { BaseChartDirective } from 'ng2-charts';
 
 
 @Component({
@@ -15,6 +16,8 @@ import * as FileSaver from 'file-saver';
   styleUrls: ['./dash-board.component.scss']
 })
 export class DashBoardComponent implements OnInit {
+  
+@ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
   totalTask: number = 0;
 
@@ -68,6 +71,10 @@ export class DashBoardComponent implements OnInit {
 
   loadChartData() {
     const counts: TaskStatusCounts = this.taskService.getTaskStatusCounts();
+    const completedCount = this.tasks.filter(t => t.status === 'Completed').length;
+  const pendingCount = this.tasks.filter(t => t.status === 'Pending').length;
+  const wipCount = this.tasks.filter(t => t.status === 'WIP').length;
+  const rescheduledCount = this.tasks.filter(t => t.status === 'Rescheduled').length;
 
     this.doughnutChartData.datasets[0].data = [
       counts.completed,
@@ -75,6 +82,10 @@ export class DashBoardComponent implements OnInit {
       counts.wip,
       counts.rescheduled
     ];
+    if (this.chart) {
+    this.chart.update();
+  }
+
   }
 
   /**Apply filter base on search val 
@@ -100,6 +111,7 @@ export class DashBoardComponent implements OnInit {
         this.tasks.push(result);
         localStorage.setItem('tasks', JSON.stringify(this.tasks)); // Save to localStorage
         this.dataSource.data = this.tasks;
+        this.loadChartData();
       }
     });
   }
@@ -125,6 +137,7 @@ export class DashBoardComponent implements OnInit {
         if (index > -1) {
           this.taskService.editTask(result);
           this.loadTasks();
+          this.loadChartData();
         }
       }
     });

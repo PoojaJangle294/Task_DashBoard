@@ -87,6 +87,15 @@ export class TaskService {
   }
 
   /**
+   * Get the task status count
+   */
+  getTaskCount(){
+    const tasks = this.getTasks();
+    const statuscount = tasks.map((sat)=>{console.log(sat.status)});
+    return statuscount
+  }
+
+  /**
    * Filter the data by search input
    */
   filterTasks(filter: string): Task[] {
