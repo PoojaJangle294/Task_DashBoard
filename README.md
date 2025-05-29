@@ -11,6 +11,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 - Update the existing task
 - Display all tasks
 - Display the task ratio in the doghunt chart
+- Export the tasks list into an Excel file.
 
 ##  Tech Stack
 - Angular
@@ -19,6 +20,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 - Chart.js
 - Scss
 - Angular Material
+- xlsx 
 
 ## Installation
 
