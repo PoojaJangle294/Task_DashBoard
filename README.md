@@ -6,22 +6,40 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Features
+- Create a new task.
+- Update the existing task
+- Display all tasks
+- Display the task ratio in the doghunt chart
+- Export the tasks list into an Excel file.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+##  Tech Stack
+- Angular
+- TypeScript
+- ng2-charts
+- Chart.js
+- Scss
+- Angular Material
+- xlsx 
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. **Clone the repo**
 
-## Running unit tests
+bash
+git clone https://github.com/PoojaJangle294/Task_DashBoard.git
+cd project-name
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+##Notes
+- Make sure Node.js and Angular CLI are installed.
 
-## Running end-to-end tests
+- The node_modules folder is excluded from version control (as per .gitignore).
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- All required packages are listed in package.json.
+
+#Deploy link: https://poojajangle294.github.io/Task_DashBoard/
+
 
 ## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+-Contact
+For any questions, feel free to contact me at poojajangle29@gmail.com.
